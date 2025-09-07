@@ -13,18 +13,18 @@
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
   /* Colors */
-  --color-primary-50:  oklch(0.9278 0.0046 34.31); 
-  --color-primary-100: oklch(0.9278 0.0046 34.31); 
-  --color-primary-200: oklch(0.9278 0.0046 34.31); 
+  --color-primary-50: oklch(0.9278 0.0046 34.31);
+  --color-primary-100: oklch(0.9278 0.0046 34.31);
+  --color-primary-200: oklch(0.9278 0.0046 34.31);
 
-  --color-primary-300: oklch(0.7307 0.2436 325.82); 
-  --color-primary-400: oklch(0.7307 0.2436 325.82); 
-  --color-primary-500: oklch(0.7307 0.2436 325.82); 
+  --color-primary-300: oklch(0.7307 0.2436 325.82);
+  --color-primary-400: oklch(0.7307 0.2436 325.82);
+  --color-primary-500: oklch(0.7307 0.2436 325.82);
   --color-primary-600: oklch(0.7307 0.2436 325.82);
-  --color-primary-700: oklch(0.7307 0.2436 325.82);   
-  --color-primary-800: oklch(0.7307 0.2436 325.82);  
-  --color-primary-900: oklch(0.7307 0.2436 325.82);   
-  --color-primary-950: oklch(0.7307 0.2436 325.82);   
+  --color-primary-700: oklch(0.7307 0.2436 325.82);
+  --color-primary-800: oklch(0.7307 0.2436 325.82);
+  --color-primary-900: oklch(0.7307 0.2436 325.82);
+  --color-primary-950: oklch(0.7307 0.2436 325.82);
 
   --color-gray-50: oklch(0.9278 0.0046 34.31);
   --color-gray-100: oklch(0.9278 0.0046 34.31);
@@ -60,7 +60,6 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  
   *,
   ::after,
   ::before,

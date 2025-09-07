@@ -38,7 +38,6 @@ const projectsData: Project[] = [
     imgSrc: '',
     href: '/blog/the-time-machine',
   },
-  
 ]
 
 export default projectsData

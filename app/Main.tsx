@@ -9,16 +9,16 @@ const MAX_DISPLAY = 5
 export default function Home({ posts }) {
   return (
     <>
-      <div className="divide-y-2 divide-primary-300 dark:divide-primary-300">
+      <div className="divide-primary-300 dark:divide-primary-300 divide-y-2">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl leading-9 font-extrabold italic tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
+          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 italic sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
             Latest
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </p>
         </div>
-        <ul className="divide-y-2 divide-primary-300 dark:divide-primary-300">
+        <ul className="divide-primary-300 dark:divide-primary-300 divide-y-2">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
@@ -82,9 +82,7 @@ export default function Home({ posts }) {
         </div>
       )}
       {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4">
-          {/* <NewsletterForm /> */}
-        </div>
+        <div className="flex items-center justify-center pt-4">{/* <NewsletterForm /> */}</div>
       )}
     </>
   )

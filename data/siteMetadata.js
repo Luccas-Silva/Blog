@@ -26,7 +26,7 @@ const siteMetadata = {
   medium: '',
   bluesky: '',
   locale: 'pt-BR',
-  
+
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
   analytics: {
