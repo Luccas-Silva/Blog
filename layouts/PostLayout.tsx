@@ -68,10 +68,10 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                           width={38}
                           height={38}
                           alt="avatar"
-                          className="h-10 w-10 rounded-full"
+                          className="border-primary-300/60 dark:border-primary-300/60 h-15 w-15 rounded-full border-2 object-cover object-top"
                         />
                       )}
-                      <dl className="text-sm leading-5 font-medium whitespace-nowrap">
+                      <dl className="text-base leading-5 font-medium whitespace-nowrap">
                         <dt className="sr-only">Name</dt>
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
                         <dt className="sr-only">Twitter</dt>

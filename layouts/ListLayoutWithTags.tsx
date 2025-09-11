@@ -49,7 +49,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
           </Link>
         )}
         <span>
-          {currentPage} of {totalPages}
+          {currentPage} / {totalPages}
         </span>
         {!nextPage && (
           <button className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
@@ -82,8 +82,8 @@ export default function ListLayoutWithTags({
   return (
     <>
       <div>
-        <div className="pt-6 pb-6">
-          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
+        <div className="pt-6 pb-6 sm:ml-4">
+          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 italic sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
             {title}
           </h1>
         </div>
@@ -91,13 +91,13 @@ export default function ListLayoutWithTags({
           <div className="border-primary-300/60 dark:border-primary-300/60 hidden h-full max-h-screen max-w-[280px] min-w-[280px] flex-wrap overflow-auto rounded-lg border-2 pt-5 sm:flex">
             <div className="px-6 py-4">
               {pathname.startsWith('/blog') ? (
-                <h3 className="text-primary-500 font-bold uppercase">Tags - All Posts</h3>
+                <h3 className="text-primary-500 font-bold uppercase">All Posts - Tags</h3>
               ) : (
                 <Link
                   href={`/blog`}
                   className="hover:text-primary-500 dark:hover:text-primary-500 font-bold text-gray-700 uppercase dark:text-gray-300"
                 >
-                  Tags - All Posts
+                  All Posts - Tags
                 </Link>
               )}
               <ul>
@@ -124,7 +124,7 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
-            <ul>
+            <ul className="divide-primary-300 dark:divide-primary-300 divide-y">
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags } = post
                 return (
