@@ -177,3 +177,61 @@ input:-webkit-autofill:focus {
   vertical-align: middle;
 }
 
+/* ícone da lupa */
+svg.text-gray-400 {
+  color: rgb(59 130 246) !important; /* azul */
+}
+
+/* placeholder */
+input[role="combobox"]::placeholder {
+  color: rgb(147 197 253) !important; /* azul claro */
+}
+
+/* texto */
+input[role="combobox"] {
+  color: rgb(29 78 216) !important; /* azul escuro */
+}
+
+/* ======================
+   Overrides para Kbar
+   Colar em styles/search-overrides.css
+   ====================== */
+
+/* Ícone (lupa) dentro da linha da busca */
+.flex.items-center.space-x-4.p-4 svg {
+  color: #2563EB !important;   /* blue-600 (afeta stroke="currentColor") */
+  stroke: #2563EB !important;
+}
+
+/* Texto do input e placeholder */
+input[role="combobox"] {
+  color: #0f172a !important; /* slate-900 / texto principal */
+}
+input[role="combobox"]::placeholder {
+  color: #60A5FA !important; /* blue-400 / placeholder */
+  opacity: 1 !important;
+}
+
+/* KBD (ESC) — seleciona o kbd que vem logo após o input */
+input[role="combobox"] + kbd,
+.flex.items-center.space-x-4.p-4 > kbd {
+  color: #2563EB !important;         /* cor do texto dentro do KBD */
+  border-color: #93C5FD !important;  /* cor da borda do KBD */
+  background-color: transparent !important;
+}
+
+/* Mensagem "No results for your search..." */
+.block.border-t.px-4.py-8.text-center {
+  color: #2563EB !important;           /* cor do texto */
+  border-top-color: #BFDBFE !important;/* cor da borda superior */
+  background: transparent !important;
+}
+
+/* Dark mode: se você usa a classe .dark no root */
+.dark .block.border-t.px-4.py-8.text-center {
+  color: #93C5FD !important;
+  border-top-color: #1E3A8A !important;
+}
+
+
+
