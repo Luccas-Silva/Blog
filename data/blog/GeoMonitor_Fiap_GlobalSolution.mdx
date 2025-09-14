@@ -1,0 +1,169 @@
+---
+title: 'GeoMonitor - Fiap GlobalSolution: Monitoramento Inteligente de Zonas de Risco'
+date: '2025-06-18'
+lastmod: '2025-05-29'
+tags: ['java', 'spring-boot', 'iot', 'mensageria', 'inteligencia-artificial', 'fiap', 'global-solution', 'monitoramento']
+draft: false
+summary: 'O GeoMonitor é uma plataforma desenvolvida na FIAP para monitoramento preditivo de áreas de risco, integrando sensores IoT, inteligência artificial e mensageria assíncrona. Conheça as soluções técnicas, funcionalidades e como rodar o projeto.'
+images: ['']
+authors: ['default']
+layout: PostLayout
+canonicalUrl: https://github.com/Luccas-Silva/Fiap_GlobalSolution_Java
+---
+
+## Introdução
+
+O **GeoMonitor** é uma solução acadêmica desenvolvida como parte do desafio Global Solution da FIAP, com foco no monitoramento inteligente de zonas de risco como encostas, barragens e regiões suscetíveis a desastres naturais. Utilizando sensores IoT, inteligência artificial e mensageria assíncrona, o projeto viabiliza acompanhamento preditivo, geração de alertas automáticos e resposta ágil a eventos críticos.
+
+<TOCInline toc={props.toc} exclude="Introdução" />
+
+## Objetivo
+
+- Monitorar áreas de risco em tempo real.
+- Gerar alertas automáticos a partir de leituras sensoriais.
+- Acionar e registrar equipes de resposta.
+- Aplicar IA para apoio à análise de ocorrências.
+- Disponibilizar painel de controle com histórico de alertas e dados sensoriais.
+
+## Tecnologias Utilizadas
+
+- **Java 21+**: Backend moderno, seguro e performático.
+- **Spring Boot**: Framework principal para API, segurança e serviços.
+- **Spring Data JPA & Hibernate**: Persistência em bancos relacionais (H2, Azure SQL, Oracle).
+- **Spring Security**: Autenticação e autorização por roles.
+- **Lombok**: Redução de boilerplate em entidades e serviços.
+- **RabbitMQ**: Mensageria assíncrona para eventos críticos.
+- **Spring AI**: Integração pronta com modelos OpenAI.
+- **Thymeleaf**: Renderização do painel web.
+- **JUnit 5 & Mockito**: Testes automatizados.
+
+## Principais Funcionalidades
+
+- Cadastro e gerenciamento de áreas de risco, sensores e equipes de resposta.
+- Coleta periódica (manual e automática) dos dados dos sensores.
+- Geração automática de alertas por limiares sensoriais.
+- Mensageria assíncrona via RabbitMQ para eventos críticos.
+- Apoio de inteligência artificial na classificação e análise de ocorrências.
+- Painel web (Thymeleaf) para visualização de dados e histórico.
+- Testes automatizados cobrindo entidades, controllers, repositórios e serviços.
+
+## Estrutura do Projeto
+
+```
+src/
+ ├── main/
+ │    ├── java/
+ │    │    └── com/fiap/Java_GlobalSolution/
+ │    │          ├── controller/
+ │    │          ├── model/
+ │    │          ├── repository/
+ │    │          ├── Service/
+ │    │          └── configs/
+ │    └── resources/
+ │         ├── application.properties
+ │         ├── database/create.sql
+ │         └── templates/ (views Thymeleaf)
+ └── test/
+      └── java/com/fiap/Java_GlobalSolution/
+```
+
+## Banco de Dados
+
+O GeoMonitor suporta múltiplos bancos relacionais e vem configurado para usar H2 em memória por padrão, facilitando testes e desenvolvimento rápido. Para ambientes de produção, pode ser facilmente adaptado para Azure SQL ou Oracle.
+
+```properties
+# H2 (default)
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.username=sa
+spring.datasource.password=
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# Azure SQL (exemplo)
+spring.datasource.url=jdbc:sqlserver://...;database=...
+spring.datasource.username=...
+spring.datasource.password=...
+
+# Oracle (exemplo)
+spring.datasource.url=jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
+spring.datasource.username=...
+spring.datasource.password=...
+```
+
+## Como Executar
+
+### Pré-requisitos
+
+- Java 21+
+- Maven
+- (Opcional) RabbitMQ local (pode ser via Docker)
+- (Opcional) Banco relacional para produção
+- (Opcional) Conta OpenAI para IA
+
+### Passos
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/Luccas-Silva/Fiap_GlobalSolution_Java.git
+   cd Fiap_GlobalSolution_Java
+   ```
+
+2. **(Opcional) Ajuste o banco**  
+   O projeto já sobe com H2 em memória por padrão.  
+   Para usar Azure SQL ou Oracle, edite `application.properties` conforme necessário.
+
+3. **Inicie o RabbitMQ (opcional, para mensageria)**
+   ```bash
+   docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+   ```
+
+4. **Compile e execute**
+   ```bash
+   mvn clean install
+   mvn spring-boot:run
+   ```
+   Acesse em: [http://localhost:8080](http://localhost:8080)
+
+5. **Acesse o H2 Console (opcional)**
+   - [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+   - JDBC URL: `jdbc:h2:mem:testdb`, usuário: `sa`
+
+## Testes Automatizados
+
+Execute todos os testes com:
+```bash
+mvn test
+```
+Os testes abrangem entidades, repositórios, controllers, serviços, autenticação e integração RabbitMQ.
+
+## Integração RabbitMQ
+
+- Producers e consumers configurados em `/Service/` e `/configs/`.
+- Mensagens trocadas entre filas configuráveis.
+- Exemplo de configuração em `RabbitMQConfig.java` e `application.properties`.
+
+## Integração com Inteligência Artificial
+
+- Configuração pronta para uso de modelos OpenAI via Spring AI.
+- Basta definir as chaves e endpoints em `application.properties` e `AiConfig.java`.
+
+## Segurança
+
+- Spring Security protege endpoints críticos e permite autenticação baseada em roles.
+
+## Estrutura do Banco
+
+O banco de dados inclui tabelas para usuários, equipes de resposta, áreas de risco, sensores e alertas.
+
+![Relational_1](https://github.com/user-attachments/assets/75f40d2b-7d39-4206-b48d-128ba2172790)
+
+## Conclusão
+
+O GeoMonitor é um exemplo prático de aplicação de tecnologias modernas para resolver problemas reais de monitoramento de riscos ambientais. O projeto demonstra integração de backend Java com mensageria, IA, segurança e frontend web, servindo de base para estudos ou futuras evoluções.
+
+---
+
+**Repositório completo:**  
+[github.com/Luccas-Silva/Fiap_GlobalSolution_Java](https://github.com/Luccas-Silva/Fiap_GlobalSolution_Java)
+
+**Dúvidas?** Abra uma issue ou consulte a documentação interna do projeto!
