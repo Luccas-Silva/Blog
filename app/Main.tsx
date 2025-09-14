@@ -15,7 +15,7 @@ export default function Home({ posts }) {
             Latest
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            My most recent projects and thoughts.
           </p>
         </div>
         <ul className="divide-primary-300 dark:divide-primary-300 divide-y-2">
