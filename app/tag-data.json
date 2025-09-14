@@ -1,6 +1,17 @@
 {
-  "teste": 1,
-  "next-js": 1,
-  "tailwind": 1,
-  "guide": 1
+  "java": 5,
+  "spring-boot": 1,
+  "fiap": 4,
+  "csharp": 2,
+  "api": 3,
+  "cloud": 1,
+  "maven": 1,
+  "jdbc": 1,
+  "mysql": 1,
+  "arquitetura-em-camadas": 1,
+  "jogo": 1,
+  "blackjack": 1,
+  "react": 1,
+  "typescript": 1,
+  "ux": 1
 }

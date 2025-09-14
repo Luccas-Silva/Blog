@@ -1,0 +1,65 @@
+---
+title: 'Java BlackJack'
+date: '2024-05-07'
+lastmod: '2024-04-22'
+tags: ['java', 'api', 'mysql', 'game']
+draft: false
+summary: 'Conheça o Java BlackJack: um projeto que implementa o clássico jogo de cartas com consumo de API, banco de dados relacional, arquitetura robusta em camadas e interface de console amigável.'
+images: ['']
+authors: ['default']
+layout: PostLayout
+canonicalUrl: https://github.com/Luccas-Silva/java_BlackJack
+---
+
+## Introdução
+
+O **Java BlackJack** é um projeto que traz o clássico jogo de cartas para o universo Java, com uma implementação robusta, modular e conectada a um banco de dados real! Utilizando a [Deck of Cards API](https://www.deckofcardsapi.com/) e arquitetura em camadas, o projeto serve tanto como exemplo de boas práticas em desenvolvimento quanto como um divertido passatempo para amantes de programação e jogos.
+
+<TOCInline toc={props.toc} exclude="Introdução" />
+
+## Arquitetura em Camadas
+
+O projeto foi estruturado em módulos distintos, seguindo o padrão de arquitetura em camadas para garantir organização, manutenibilidade e escalabilidade:
+
+- **Modelo**: Classes que representam cartas, jogadores e partidas.
+- **Serviço**: Lógica do jogo, como embaralhamento, distribuição de cartas e verificação de vencedores.
+- **DAO (Data Access Object)**: Persistência e recuperação de dados das partidas no banco de dados.
+- **Visão**: Interface de console para interação simples e direta com o usuário.
+
+## Consumo de API
+
+A integração com a Deck of Cards API é feita via HttpClient e HttpEntity, permitindo obter baralhos embaralhados e cartas automaticamente. As respostas são deserializadas em objetos Java usando Gson, facilitando o processamento dos dados no sistema.
+
+## Banco de Dados & Persistência
+
+Toda a evolução das partidas e estatísticas dos jogadores é registrada em um banco relacional (MySQL, por padrão), via JDBC. Isso permite:
+
+- Histórico de partidas.
+- Estatísticas e progresso dos jogadores.
+- Consultas rápidas para análise e visualização de dados.
+
+## Tecnologias Utilizadas
+
+- **Java** — Linguagem principal.
+- **Maven** — Gerenciador de dependências e build.
+- **HTTP Client** — Comunicação com APIs externas.
+- **Gson** — Serialização e desserialização JSON.
+- **JDBC** — Acesso ao banco de dados.
+- **MySQL** — Banco relacional para persistência dos dados.
+
+## Benefícios
+
+- **Arquitetura robusta**: Fácil de expandir, testar e manter.
+- **Dados persistentes**: Consultas de histórico e estatísticas enriquecem a experiência.
+- **Interface amigável**: Jogue diretamente pelo console, sem complicações.
+
+## Conclusão
+
+O Java BlackJack vai além de um simples jogo: é um laboratório de conceitos modernos em desenvolvimento Java, ideal para quem deseja estudar arquitetura de sistemas, consumo de APIs e persistência de dados — ou apenas curtir uma partida de Blackjack entre um commit e outro! O projeto está pronto para ser estendido com novas regras, modos de jogo ou até uma interface gráfica.
+
+---
+
+**Repositório completo:**  
+[github.com/Luccas-Silva/java_BlackJack](https://github.com/Luccas-Silva/java_BlackJack)
+
+Dúvidas ou sugestões? Abra uma issue e participe!
