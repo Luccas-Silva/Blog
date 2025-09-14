@@ -1,0 +1,100 @@
+---
+title: 'LessPollu - Monitoramento Inteligente de Emissões Industriais | Fiap GlobalSolution'
+date: '2024-11-21'
+lastmod: '2024-11-14'
+tags: ['java', 'csharp', 'cloud', 'fiap']
+draft: false
+summary: 'Conheça o LessPollu: solução da FIAP que monitora em tempo real a emissão de gases poluentes de indústrias, integra IoT, IA, blockchain e dashboards para apoiar práticas mais sustentáveis, gerar valor socioambiental e facilitar compliance ambiental.'
+images: ['']
+authors: ['default']
+layout: PostLayout
+canonicalUrl: https://github.com/Luccas-Silva/Fiap_GlobalSolution_LessPollu
+---
+
+## Introdução
+
+O **LessPollu** é uma solução desenvolvida para o GlobalSolution FIAP, focada no monitoramento em tempo real das emissões industriais de gases poluentes. Utilizando sensores IoT, nuvem, IA, blockchain e dashboards de visualização, a plataforma ajuda empresas, governo e sociedade a avançar em direção a práticas mais sustentáveis, promovendo transparência, redução de impacto ambiental e inovação no setor industrial.
+
+<TOCInline toc={props.toc} exclude="Introdução" />
+
+## Objetivo
+
+- Monitorar em tempo real as emissões de gases poluentes (CO₂, NOx, CO, etc.) em ambientes industriais.
+- Fornecer dados confiáveis para apoiar práticas sustentáveis e compliance ambiental.
+- Facilitar análise, coleta e visualização de dados sobre processos energéticos.
+- Apoiar empresas e stakeholders na adoção de energias renováveis e metas de redução de emissões.
+
+## Tecnologias e Ferramentas
+
+- **Sensores IoT**: Instalação de dispositivos conectados em fábricas para medir poluentes.
+- **Plataforma em Nuvem**: Armazenamento e processamento em tempo real, acessível por autoridades e empresas (ex: AWS IoT, Google Cloud IoT, Azure IoT).
+- **Machine Learning & IA**: Algoritmos de previsão de emissões, detecção de desvios e sugestões para redução de poluentes.
+- **Blockchain**: Registro imutável e transparente das emissões, aumentando a confiança nos dados.
+- **Dashboards**: Visualização de indicadores, conformidade e histórico de emissões.
+
+## Proposta de Valor
+
+- **Para Indústrias**: Reduz custo com multas, permite acesso a incentivos e parcerias sustentáveis, além de otimizar processos e reduzir desperdícios.
+- **Para Governo & Sociedade**: Aumenta a transparência, melhora a fiscalização e permite resposta rápida a riscos ambientais.
+
+## Modelo de Negócio
+
+- **Assinatura/Licenciamento**: Cobrança proporcional ao porte da indústria e ao volume de dados.
+- **Consultoria Sustentável**: Serviços extras para ajudar empresas a atingir metas ambientais.
+- **Parcerias Públicas**: Apoio a órgãos reguladores e políticas ambientais com relatórios e insights.
+
+## Impacto Socioambiental
+
+- **Justiça Social**: Redução de problemas de saúde e melhoria da qualidade de vida em comunidades próximas às indústrias.
+- **Sustentabilidade Econômica**: Indústrias mais eficientes e sustentáveis a longo prazo.
+- **Preservação Ambiental**: Menos poluição no ar, solo e água, protegendo ecossistemas.
+
+## Desafios e Soluções
+
+- **Adesão das Indústrias**: Fase inicial gratuita ou descontos para incentivar adoção.
+- **Precisão dos Dados**: Sensores calibrados e algoritmos avançados para máxima confiabilidade.
+- **Privacidade e Segurança**: Blockchain e criptografia garantem proteção e integridade dos dados.
+
+## Diagrama de Classes
+
+![image](https://github.com/user-attachments/assets/5712457d-a3ef-4ef5-b247-bc16c2a708f0)
+![image](https://github.com/user-attachments/assets/7fbf4119-1dd1-4baf-bdc6-0ba222f7fbb1)
+![image](https://github.com/user-attachments/assets/10392227-d40f-480f-b1f2-b466b3f8d61c)
+
+## Como Executar a Aplicação
+
+### Java
+
+1. Edite `application.properties` com as credenciais do seu banco Oracle:
+   ```properties
+   spring.datasource.url=jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
+   spring.datasource.username=usuario
+   spring.datasource.password=senha
+   spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+   spring.jpa.hibernate.ddl-auto=create
+   spring.jpa.database-platform=org.hibernate.dialect.OracleDialect
+   ```
+2. Salve e rode a aplicação normalmente.
+
+### CSharp
+
+1. Edite `Program.cs` e configure a string de conexão:
+   ```csharp
+   builder.Services.AddDbContext<ApplicationContext>(options => {
+       options.UseOracle("Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oracle.fiap.com.br)(PORT=1521))) (CONNECT_DATA=(SERVER=DEDICATED)(SID=ORCL)));User Id=********;Password=******;");
+   });
+   ```
+2. Salve e execute o projeto.
+
+A aplicação estará pronta para monitorar, registrar e analisar emissões industriais!
+
+## Conclusão
+
+O LessPollu representa um passo importante em direção à sustentabilidade industrial, combinando tecnologia de ponta, impacto social e inovação. Seja para empresas que buscam compliance ou para governos que precisam de dados confiáveis, a plataforma é um exemplo de como TI pode transformar o meio ambiente para melhor.
+
+---
+
+**Repositório completo:**  
+[github.com/Luccas-Silva/Fiap_GlobalSolution_LessPollu](https://github.com/Luccas-Silva/Fiap_GlobalSolution_LessPollu)
+
+Dúvidas ou sugestões? Abra uma issue!

@@ -1,0 +1,94 @@
+---
+title: 'FairyTooth'
+date: '2025-05-18'
+lastmod: '2025-03-17'
+tags: ['java', 'csharp', 'fiap', 'api']
+draft: false
+summary: 'Conheça o FairyTooth, solução desenvolvida para o Challenge Odontoprev: uma plataforma inteligente que integra dados clínicos, recomendações personalizadas, gamificação e integração com a rede de dentistas, promovendo prevenção e eficiência na gestão da saúde bucal.'
+images: ['']
+authors: ['default']
+layout: PostLayout
+canonicalUrl: https://github.com/Luccas-Silva/fiap_challenge_odontoprev_v2
+---
+
+## Introdução
+
+O **FairyTooth** é uma plataforma desenvolvida para o desafio Odontoprev da FIAP, com o objetivo de revolucionar a gestão da saúde bucal, integrando tecnologia, inteligência de dados e experiência personalizada para pacientes e profissionais. Inspirada em soluções HealthTech, ela centraliza informações clínicas, históricos, hábitos e conecta pacientes à rede de dentistas de modo eficiente e inovador.
+
+<TOCInline toc={props.toc} exclude="Introdução" />
+
+## Proposta & Diferenciais
+
+A plataforma atua como um verdadeiro “assistente pessoal” de saúde bucal, oferecendo:
+
+- **Análise preditiva**: Utiliza machine learning para identificar padrões de risco, como uso excessivo de procedimentos ou alta rotatividade de profissionais.
+- **Recomendações personalizadas**: Geração de sugestões de tratamentos preventivos e produtos conforme o perfil do paciente.
+- **Gamificação**: Sistema de cashback e incentivos para promover hábitos saudáveis e engajamento.
+- **Comunicação personalizada**: Notificações, lembretes e conteúdos educativos diretamente para o paciente.
+- **Integração com a rede Odontoprev**: Agendamento facilitado, acompanhamento dos tratamentos e troca de informações entre profissionais.
+
+## Diagrama de Relacionamento (DER)
+
+![image](https://github.com/user-attachments/assets/684c9e4d-141f-4fe4-89cc-6e088574758b)
+![image](https://github.com/user-attachments/assets/64a41d1e-612f-4e95-ae2a-d8807e5e7cb6)
+
+## Como Executar a Aplicação
+
+1. **Configure o banco de dados**  
+   Edite o arquivo `application.properties` com as credenciais do seu banco Oracle:
+
+   ```properties
+   spring.datasource.url=jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
+   spring.datasource.username=usuario
+   spring.datasource.password=senha
+   spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+   spring.jpa.hibernate.ddl-auto=create
+   spring.jpa.database-platform=org.hibernate.dialect.OracleDialect
+   ```
+
+2. **Salve e execute a aplicação**  
+   Após configurar, basta rodar o projeto normalmente. A aplicação irá se conectar ao banco usando os dados fornecidos.
+
+## Endpoints Disponíveis
+
+A API RESTful do FairyTooth oferece endpoints para gestão de clientes, dentistas e consultas:
+
+### Cliente
+
+- **GET** `/cliente/lista`: Listar clientes
+- **POST** `/cliente/novo`: Criar cliente
+- **PUT** `/cliente/editar/{clienteId}`: Editar cliente
+- **DELETE** `/cliente/deletar/{clienteId}`: Deletar cliente
+
+### Dentista
+
+- **GET** `/dentista/listas`: Listar dentistas
+- **POST** `/dentista/novo`: Criar dentista
+- **PUT** `/dentista/editar/{dentistaId}`: Editar dentista
+- **DELETE** `/dentista/deletar/{dentistaId}`: Deletar dentista
+
+### Consulta
+
+- **GET** `/consulta/listas`: Listar consultas
+- **POST** `/consulta/novo`: Criar consulta
+- **PUT** `/consulta/editar/{consultaId}`: Editar consulta
+- **DELETE** `/consulta/deletar/{consultaId}`: Deletar consulta
+
+## Tecnologias Utilizadas
+
+- **Java** & **C#**: Backend robusto e interoperável.
+- **Spring Boot**: Criação de APIs seguras e escaláveis.
+- **Oracle Database**: Persistência dos dados clínicos.
+- **Machine Learning**: Análise preditiva de riscos e recomendações.
+- **Gamificação**: Aumento do engajamento dos usuários.
+
+## Conclusão
+
+O FairyTooth representa uma abordagem inovadora para a gestão da saúde bucal, conectando tecnologia, prevenção e personalização. O projeto demonstra como a integração de dados e a experiência do usuário podem transformar o cuidado odontológico, oferecendo valor tanto para pacientes quanto para profissionais da área.
+
+---
+
+**Repositório completo:**  
+[github.com/Luccas-Silva/fiap_challenge_odontoprev_v2](https://github.com/Luccas-Silva/fiap_challenge_odontoprev_v2)
+
+Dúvidas ou sugestões? Abra uma issue e participe!
