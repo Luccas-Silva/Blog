@@ -2,7 +2,17 @@
 title: 'GeoMonitor - Fiap GlobalSolution: Monitoramento Inteligente de Zonas de Risco'
 date: '2025-06-18'
 lastmod: '2025-05-29'
-tags: ['java', 'spring-boot', 'iot', 'mensageria', 'inteligencia-artificial', 'fiap', 'global-solution', 'monitoramento']
+tags:
+  [
+    'java',
+    'spring-boot',
+    'iot',
+    'mensageria',
+    'inteligencia-artificial',
+    'fiap',
+    'global-solution',
+    'monitoramento',
+  ]
 draft: false
 summary: 'O GeoMonitor é uma plataforma desenvolvida na FIAP para monitoramento preditivo de áreas de risco, integrando sensores IoT, inteligência artificial e mensageria assíncrona. Conheça as soluções técnicas, funcionalidades e como rodar o projeto.'
 images: ['']
@@ -103,6 +113,7 @@ spring.datasource.password=...
 ### Passos
 
 1. **Clone o repositório**
+
    ```bash
    git clone https://github.com/Luccas-Silva/Fiap_GlobalSolution_Java.git
    cd Fiap_GlobalSolution_Java
@@ -113,15 +124,18 @@ spring.datasource.password=...
    Para usar Azure SQL ou Oracle, edite `application.properties` conforme necessário.
 
 3. **Inicie o RabbitMQ (opcional, para mensageria)**
+
    ```bash
    docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
    ```
 
 4. **Compile e execute**
+
    ```bash
    mvn clean install
    mvn spring-boot:run
    ```
+
    Acesse em: [http://localhost:8080](http://localhost:8080)
 
 5. **Acesse o H2 Console (opcional)**
@@ -131,9 +145,11 @@ spring.datasource.password=...
 ## Testes Automatizados
 
 Execute todos os testes com:
+
 ```bash
 mvn test
 ```
+
 Os testes abrangem entidades, repositórios, controllers, serviços, autenticação e integração RabbitMQ.
 
 ## Integração RabbitMQ
