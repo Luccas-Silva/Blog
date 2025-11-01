@@ -1,17 +1,13 @@
 {
-  "java": 5,
-  "spring-boot": 1,
-  "fiap": 4,
+  "java": 8,
+  "spring-boot": 5,
+  "react": 4,
+  "typescript": 4,
+  "game": 4,
   "csharp": 2,
-  "api": 3,
-  "cloud": 1,
-  "maven": 1,
-  "jdbc": 1,
-  "mysql": 1,
-  "arquitetura-em-camadas": 1,
-  "jogo": 1,
-  "blackjack": 1,
-  "react": 1,
-  "typescript": 1,
-  "ux": 1
+  "fiap": 4,
+  "api": 4,
+  "angular": 1,
+  "ux": 3,
+  "nextjs": 2
 }
