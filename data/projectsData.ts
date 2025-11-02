@@ -21,13 +21,13 @@ const projectsData: Project[] = [
   {
     title: 'Valorant WebSite',
     description: `Valorant WebSite é uma plataforma web feita em React para fãs de Valorant, reunindo informações sobre agentes, mapas, armas e estratégias, oferecendo uma experiência envolvente e informativa para jogadores de todos os níveis.`,
-    imgSrc: '',
+    imgSrc: '/static/images/Valorant.png',
     href: '/blog/Valorant_WebSite',
   },
   {
     title: 'Chess System Java',
     description: `Chess System Java é um jogo de xadrez para terminal, desenvolvido em Java com orientação a objetos e regras oficiais, oferecendo uma experiência completa e educativa para jogadores e estudantes de programação.`,
-    imgSrc: '',
+    imgSrc: '/static/images/Chess-System-Java.png',
     href: '/blog/Chess_System_Java',
   },
 ]
