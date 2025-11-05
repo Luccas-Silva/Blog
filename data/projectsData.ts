@@ -13,6 +13,12 @@ const projectsData: Project[] = [
     href: '/blog/GeoMonitor',
   },
   {
+    title: 'WebSite Salesforce',
+    description: `WebSite Salesforce propõe uma experiência digital inovadora para os usuários da Salesforce, focando em acessibilidade, usabilidade e integração. O projeto foi desenvolvido a partir de feedbacks reais dos próprios usuários da plataforma, e busca criar um site mais inclusivo, explicativo e agradável para todos os públicos.`,
+    imgSrc: '/static/images/Salesforce.png',
+    href: '/blog/Web_Salesforce',
+  },
+  {
     title: 'Java BlackJack',
     description: `Java BlackJack é um projeto que recria o clássico jogo de cartas em Java, usando a Deck of Cards API, arquitetura em camadas e integração com banco de dados. Combina boas práticas de desenvolvimento com diversão para quem gosta de programação e jogos.`,
     imgSrc: '/static/images/Black-Jack.png',
